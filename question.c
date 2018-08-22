@@ -9,13 +9,13 @@ int main(void){
         for (j = 1 ; j <= i ; j += 2){
             printf("%d %d\n",i,j);
             if (i % j == 0){
-                //ココ
+                count++;    //ココ
             }
         }
         if (count == 8){
-            //ココ
+            c++;    //ココ
         }
-        //ココ
+        count=0;    //ココ
     }
     printf("%d",c);
 }
