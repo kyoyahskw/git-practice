@@ -9,10 +9,10 @@ int rec(int i,int j){
   int res;
   if(i ==n){
     //もう品物が　残っていない
-    res=0;
+    res=0;  //ここ
   } else if(j < w[i]) {
     //この品物は入らない
-    res=rec(i+1,j);
+    res=rec(i + 1,j - w[i]) + v[i];  //ここ
   }else {
     //入れない場合と入れる場合を両方試す
       res = max(rec(i + 1 , j),rec(i + 1,j - w[i]) + v[i]);
